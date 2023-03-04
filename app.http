@@ -1,0 +1,56 @@
+//API 1 Getting all state
+GET http://localhost:3000/states/
+###
+
+//API 2 Getting Particular state based on State_iD
+GET http://localhost:3000/states/2/
+###
+
+//API 3 createing district
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+{
+  "districtName": "Malappuram",
+  "stateId": 17,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 448
+}
+
+###
+
+//API 4 getting district based on district_id
+GET http://localhost:3000/districts/320/
+###
+
+
+//API 5 Removing district from district table
+DELETE http://localhost:3000/districts/321/
+###
+
+
+//API 6 Update the district based on the district_id
+PUT http://localhost:3000/districts/320/
+Content-Type: application/json
+
+{
+  "districtName": "Sri Sai teja District",
+  "stateId": 18,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 448
+}
+
+###
+
+//API 7 Getting Statistics of Sarticular state
+GET http://localhost:3000/states/2/stats/
+###
+
+
+//API 8 Getting State Name Based on district_Id
+GET http://localhost:3000/districts/180/details/
+###
